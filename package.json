@@ -1,0 +1,61 @@
+{
+  "name": "xdcanvas",
+  "version": "1.0.0",
+  "description": "A powerful, modular, and fast Discord.js canvas library.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "keywords": [
+    "discord",
+    "canvas",
+    "image-manipulation",
+    "graphics",
+    "discord.js",
+    "bot"
+  ],
+  "author": "Joaopssx",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopssx/xdcanvas.git"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.44",
+    "axios": "^1.6.2",
+    "qrcode": "^1.5.3",
+    "xdcanvas": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.4",
+    "@types/qrcode": "^1.5.5",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "discord.js": "^14.25.1",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  }
+}

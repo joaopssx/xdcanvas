@@ -1,0 +1,26 @@
+# Source files (excluded from package, we ship dist)
+src/
+
+# Test files
+test/
+.github/
+.vscode/
+
+# Config files
+tsconfig.json
+tsup.config.ts
+.eslintrc.json
+.prettierrc
+jest.config.js
+
+# Logs and artifacts
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor files
+.idea/
+.DS_Store
+*.swp
