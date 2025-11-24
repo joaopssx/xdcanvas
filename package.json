@@ -1,6 +1,6 @@
 {
   "name": "xdcanvas",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A powerful, modular, and fast Discord.js canvas library.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
