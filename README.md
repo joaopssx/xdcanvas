@@ -104,7 +104,7 @@ client.on(Events.MessageCreate, async (message) => {
 Check out the full documentation for detailed guides:
 
 - [**📖 GUIDE.md**](./docs/GUIDE.md) - Complete tutorial from zero to hero.
-- [**📝 CHANGELOG.md**](./docs/CHANGELOG.md) - See what's new in v1.0.0.
+- [**📝 CHANGELOG.md**](./docs/CHANGELOG.md) - See what's new.
 
 ---
 
