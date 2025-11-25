@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.1] - 2025-11-25
+### 🐛 Fixes
+- **Documentation**: Updated README, GUIDE, and CHANGELOG to reflect v1.2.0 changes.
+- **Package**: Synced package-lock.json with correct version.
+
+## [1.2.0] - 2025-11-25
+### ✨ New Features
+- **Advanced Color Engine**:
+  - Added `src/utils/color/` with modular architecture.
+  - **Conversions**: Hex, RGB, HSL, Websafe.
+  - **Analysis**: Luminance, Contrast, Readability, Temperature, Distance.
+  - **Manipulation**: Lighten, Darken, Saturate, Invert, Mix, Tint, Shade, Warm, Cold.
+  - **Generators**: Random (Pastel/Vibrant/Neon), Gradients, Harmonies, Noise.
+  - **Accessibility**: Color Blindness Simulation.
+- **Text Engine**: Added support for `stroke` and `shadow` in text rendering.
+- **Math Utilities**: Added `clamp`, `map`, `formatNumber`.
+- **Image Filters**: Added `grayscale` and `invert`.
+
+### 🐛 Fixes
+- **ShapeEngine**: Fixed crash in `drawCircle` method.
+- **Test Bot**: Fixed multiple syntax and rendering errors in `bot_test_v1.2.0.js`.
+
 ## [1.0.0] - 2025-11-24
 
 ### 🚀 Major Release

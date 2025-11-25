@@ -4,7 +4,7 @@
 > *Fast, Modular, and Easy to use.*
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.2.1-green.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue)
 
 **XDCanvas** is a powerful graphics library designed specifically for **Discord.js** bots. It simplifies the creation of welcome cards, profile cards, rank cards, and custom images with a fluent, chainable API.
@@ -16,8 +16,15 @@
 ### 🎨 Core Graphics
 - **CanvasBuilder**: Fluent API to build images layer by layer.
 - **Universal Styles**: Set opacity, blend modes, rotation, and shadows on ANY layer.
-- **Text Engine**: Auto-fit text, multi-line wrapping, and emoji support.
+- **Text Engine**: Auto-fit text, multi-line wrapping, emoji support, **stroke**, and **shadows**.
 - **Shapes & Gradients**: Easy-to-use gradient painter and shape renderer.
+
+### 🌈 Advanced Color Engine (v1.2.0)
+- **Modular Architecture**: 30+ new functions in `ColorUtils`.
+- **Manipulation**: Lighten, Darken, Saturate, Mix, Tint, Shade, Warm, Cold.
+- **Analysis**: Luminance, Contrast Ratio, Readability, Temperature.
+- **Generators**: Random, Pastel, Neon, Gradients, Harmonies, Noise.
+- **Accessibility**: Color Blindness Simulation (Protanopia, Deuteranopia, etc.).
 
 ### 🤖 Discord Integration
 - **DiscordHelper**: Fetch User Avatars, Banners, and Guild Icons directly from Discord CDN.
@@ -26,7 +33,7 @@
 
 ### 🖼️ Image Processing
 - **Smart Resize**: `cover`, `contain`, and `scale-down` modes.
-- **Filters**: Rounded corners, circular cropping, borders.
+- **Filters**: Rounded corners, circular cropping, borders, **grayscale**, **invert**.
 - **Optimization**: Efficient buffer management.
 
 ### 📦 Ready-to-Use Presets

@@ -319,5 +319,78 @@ builder.addLayer(new MyCustomShape().setX(100).setY(100).opacity(0.5));
 
 ---
 
+## 11. Advanced Color Manipulation (v1.2.0)
+
+XDCanvas v1.2.0 introduces a massive, modular suite of color utilities. Access them via `ColorUtils`.
+
+### 1. Conversions
+```typescript
+ColorUtils.hexToRgb('#ff0000'); // { r: 255, g: 0, b: 0, a: 1 }
+ColorUtils.rgbToHex(255, 0, 0); // "#ff0000"
+ColorUtils.rgbToHsl(255, 0, 0); // { h: 0, s: 100, l: 50 }
+ColorUtils.toWebsafe('#ff0000'); // "#ff0000" (nearest websafe)
+```
+
+### 2. Analysis
+```typescript
+ColorUtils.getLuminance('#ff0000'); // 0.21...
+ColorUtils.getContrastRatio('#000000', '#ffffff'); // 21
+ColorUtils.isReadable('#ffffff', '#000000'); // true
+ColorUtils.getBestTextColor('#000000'); // "#ffffff"
+ColorUtils.getColorTemperature('#ff0000'); // 'warm'
+ColorUtils.getColorDistance('#ff0000', '#00ff00'); // Euclidean distance
+```
+
+### 3. Manipulation
+```typescript
+ColorUtils.lighten('#ff0000', 20); // Lighter red
+ColorUtils.darken('#ff0000', 20); // Darker red
+ColorUtils.saturate('#808080', 50); // More vibrant
+ColorUtils.desaturate('#ff0000', 50); // Less vibrant
+ColorUtils.invert('#ffffff'); // "#000000"
+ColorUtils.setAlpha('#ff0000', 0.5); // "#ff000080"
+ColorUtils.mix('#ff0000', '#0000ff', 0.5); // Purple
+ColorUtils.mixMultiple(['#ff0000', '#0000ff', '#00ff00']); // Average
+ColorUtils.tint('#ff0000', 0.5); // Mix with white
+ColorUtils.shade('#ff0000', 0.5); // Mix with black
+ColorUtils.warm('#ff0000', 0.2); // Warmer red
+ColorUtils.cold('#ff0000', 0.2); // Colder red
+ColorUtils.clamp('#300000'); // Ensures valid hex
+```
+
+### 4. Blending Modes
+Supported modes: `multiply`, `screen`, `overlay`.
+```typescript
+ColorUtils.blend('#ff0000', '#0000ff', 'multiply');
+```
+
+### 5. Generators
+```typescript
+ColorUtils.random(); // Random hex
+ColorUtils.randomPastel(); // Soft color
+ColorUtils.randomVibrant(); // Saturated color
+ColorUtils.randomNeon(); // Fluorescent color
+ColorUtils.generateGradient(5, '#ff0000', '#0000ff'); // 5 steps
+ColorUtils.generateColorScale('#ff0000', 10); // 10 steps light->dark
+ColorUtils.generateHarmonies('#ff0000', 'triadic'); // [base, color2, color3]
+ColorUtils.randomGradientPair(); // [color1, color2]
+ColorUtils.getSemanticColor('success'); // "#28a745"
+ColorUtils.gradientNoise(10, '#000', '#fff', 0.2); // Noisy gradient
+```
+
+### 6. Accessibility
+Simulate how color blind users see your colors.
+```typescript
+ColorUtils.simulateColorBlindness('#ff0000', 'protanopia');
+```
+
+### 7. Palette Extraction
+```typescript
+ColorUtils.getDominantColor(ctx, 0, 0, 100, 100);
+ColorUtils.getPalette(ctx, 0, 0, 100, 100, 5);
+```
+
+---
+
 **End of Guide**
 *Happy Coding with XDCanvas!*
