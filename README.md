@@ -26,6 +26,13 @@
 - **Generators**: Random, Pastel, Neon, Gradients, Harmonies, Noise.
 - **Accessibility**: Color Blindness Simulation (Protanopia, Deuteranopia, etc.).
 
+### 🧮 Advanced Math Engine (v1.3.0)
+- **Basic**: Clamp, Map, Round, IsBetween, Normalize, Factorial, Percent.
+- **Interpolation**: Lerp, SmoothStep, Sigmoid, Easing (Quad, Cubic, Expo).
+- **Random**: Int, Float, Weighted, Choice, Gaussian (Normal Distribution).
+- **Geometry**: Distance, Angle, Hypotenuse, PolarToCartesian, Collision Check.
+- **Statistics**: Moving Average, Linear Regression.
+
 ### 🤖 Discord Integration
 - **DiscordHelper**: Fetch User Avatars, Banners, and Guild Icons directly from Discord CDN.
 - **Rate Limit Handling**: Built-in backoff and retry logic for 429 errors.

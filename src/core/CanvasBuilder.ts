@@ -1,7 +1,7 @@
-/**************************************************************
+/**************************************
  * by: Joaopssx - xdcanvas
  * https://github.com/joaopssx/xdcanvas
- **************************************************************/
+ **************************************/
 
 import { Canvas, createCanvas, SKRSContext2D } from '@napi-rs/canvas';
 import { LayerManager, Layer } from './LayerManager';

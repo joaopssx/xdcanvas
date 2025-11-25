@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { Conversions } from './Conversions';
 import { Manipulation } from './Manipulation';
 
@@ -110,3 +114,4 @@ export class Generators {
       });
   }
 }
+

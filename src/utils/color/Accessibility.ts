@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { Conversions } from './Conversions';
 
 export class Accessibility {
@@ -28,3 +32,4 @@ export class Accessibility {
     return Conversions.rgbToHex(Math.min(255, Math.max(0, nr)), Math.min(255, Math.max(0, ng)), Math.min(255, Math.max(0, nb)));
   }
 }
+

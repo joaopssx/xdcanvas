@@ -1,9 +1,15 @@
 # Changelog
 
 ## [1.3.0] - 2025-11-25
-### 🚀 Release
-- **Stable Release**: Consolidated updates for Advanced Color Engine and Text Engine.
-- **Documentation**: Fully updated guides and examples.
+### ✨ New Features
+- **Advanced Math Engine**:
+  - Added `src/utils/math/` with modular architecture.
+  - **Basic**: `clamp`, `map`, `roundTo`, `roundToMultiple`, `isBetween`, `normalize`, `factorial`, `percentOfTotal`.
+  - **Interpolation**: `lerp`, `smoothStep`, `sigmoid`, `easeIn/Out` (Quad, Cubic, Expo).
+  - **Random**: `int`, `float`, `choice`, `weighted`, `gaussian`.
+  - **Geometry**: `distance`, `angle`, `hypotenuse`, `polarToCartesian`, `clampVector`, `pointInRect`.
+  - **Statistics**: `movingAverage`, `linearRegression`.
+- **Documentation**: Fully updated `GUIDE.md` with comprehensive examples for all new math functions.
 
 ## [1.2.1] - 2025-11-25
 ### 🐛 Fixes

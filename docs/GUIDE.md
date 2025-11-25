@@ -392,5 +392,61 @@ ColorUtils.getPalette(ctx, 0, 0, 100, 100, 5);
 
 ---
 
+## 12. Advanced Math Engine (v1.3.0)
+
+XDCanvas v1.3.0 includes a comprehensive math library for game logic, animations, and data visualization. Access them via `MathUtils`.
+
+### 1. Basic Math
+```typescript
+MathUtils.clamp(150, 0, 100); // 100
+MathUtils.map(0.5, 0, 1, 0, 100); // 50
+MathUtils.roundTo(3.14159, 2); // 3.14
+MathUtils.roundToMultiple(17, 5); // 15
+MathUtils.isBetween(5, 0, 10); // true
+MathUtils.normalize(50, 0, 100); // 0.5
+MathUtils.factorial(5); // 120
+MathUtils.percentOfTotal(25, 100); // 25
+```
+
+### 2. Interpolation & Easing
+Perfect for animations and smooth transitions.
+```typescript
+MathUtils.lerp(0, 100, 0.5); // 50
+MathUtils.smoothStep(0.5); // Smoothed value
+MathUtils.sigmoid(0); // 0.5
+
+// Easing Functions (In, Out, InOut)
+MathUtils.easeInQuad(0.5);
+MathUtils.easeOutCubic(0.5);
+MathUtils.easeInOutExpo(0.5);
+```
+
+### 3. Randomness
+```typescript
+MathUtils.int(1, 10); // Random integer
+MathUtils.float(0, 1); // Random float
+MathUtils.choice(['A', 'B', 'C']); // Random item
+MathUtils.weighted([{ item: 'A', weight: 1 }, { item: 'B', weight: 9 }]); // Weighted choice
+MathUtils.gaussian(0, 1); // Normal distribution (Bell curve)
+```
+
+### 4. Geometry
+```typescript
+MathUtils.distance(0, 0, 3, 4); // 5
+MathUtils.angle(0, 0, 1, 1); // 0.785 (radians)
+MathUtils.hypotenuse(3, 4); // 5
+MathUtils.polarToCartesian(10, Math.PI); // { x: -10, y: 0 }
+MathUtils.clampVector({ x: 10, y: 10 }, { x: 0, y: 0 }, { x: 5, y: 5 }); // { x: 5, y: 5 }
+MathUtils.pointInRect(10, 10, 0, 0, 20, 20); // true
+```
+
+### 5. Statistics
+```typescript
+MathUtils.movingAverage([1, 2, 3, 4, 5], 3); // [1, 1.5, 2, 3, 4]
+MathUtils.linearRegression([{x:1, y:2}, {x:2, y:4}]); // { slope: 2, intercept: 0 }
+```
+
+---
+
 **End of Guide**
 *Happy Coding with XDCanvas!*

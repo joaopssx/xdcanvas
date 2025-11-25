@@ -1,7 +1,7 @@
-/**************************************************************
+/**************************************
  * by: Joaopssx - xdcanvas
  * https://github.com/joaopssx/xdcanvas
- **************************************************************/
+ **************************************/
 
 import { AvatarLoader } from '../images/AvatarLoader';
 import { Image } from '@napi-rs/canvas';

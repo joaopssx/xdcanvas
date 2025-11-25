@@ -1,7 +1,7 @@
-/**************************************************************
+/**************************************
  * by: Joaopssx - xdcanvas
  * https://github.com/joaopssx/xdcanvas
- **************************************************************/
+ **************************************/
 
 import QRCode from 'qrcode';
 import { loadImage, Image } from '@napi-rs/canvas';

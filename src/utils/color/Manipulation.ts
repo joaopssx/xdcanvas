@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { Conversions } from './Conversions';
 
 export class Manipulation {
@@ -106,3 +110,4 @@ export class Manipulation {
     return Conversions.rgbToHex(r, rgb.g, b);
   }
 }
+

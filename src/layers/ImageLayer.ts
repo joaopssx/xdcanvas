@@ -1,7 +1,7 @@
-/**************************************************************
+/**************************************
  * by: Joaopssx - xdcanvas
  * https://github.com/joaopssx/xdcanvas
- **************************************************************/
+ **************************************/
 
 import { BaseLayer } from '../core/BaseLayer';
 import { SKRSContext2D, Canvas, Image } from '@napi-rs/canvas';

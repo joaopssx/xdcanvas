@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { RGB, HSL } from './types';
 
 export class Conversions {
@@ -71,3 +75,4 @@ export class Conversions {
     return this.rgbToHex(safe(rgb.r), safe(rgb.g), safe(rgb.b));
   }
 }
+

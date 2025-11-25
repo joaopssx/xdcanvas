@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { Conversions } from './Conversions';
 
 export class Analysis {
@@ -51,3 +55,4 @@ export class Analysis {
     );
   }
 }
+

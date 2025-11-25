@@ -1,7 +1,7 @@
-/**************************************************************
+/**************************************
  * by: Joaopssx - xdcanvas
  * https://github.com/joaopssx/xdcanvas
- **************************************************************/
+ **************************************/
 
 import { CanvasBuilder } from '../../core/CanvasBuilder';
 import { TextEngine } from '../../drawing/TextEngine';

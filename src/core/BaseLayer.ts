@@ -1,7 +1,7 @@
-/**************************************************************
+/**************************************
  * by: Joaopssx - xdcanvas
  * https://github.com/joaopssx/xdcanvas
- **************************************************************/
+ **************************************/
 
 import { SKRSContext2D, Canvas, GlobalCompositeOperation } from '@napi-rs/canvas';
 import { ShadowOptions, ShapeEngine } from '../drawing/Shapes';

@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { Conversions } from './Conversions';
 import { Analysis } from './Analysis';
 import { Manipulation } from './Manipulation';
@@ -59,3 +63,4 @@ export class ColorUtils {
   static getDominantColor = Palette.getDominantColor;
   static getPalette = Palette.getPalette;
 }
+

@@ -1,3 +1,7 @@
+/**************************************
+ * by: Joaopssx - xdcanvas
+ * https://github.com/joaopssx/xdcanvas
+ **************************************/
 import { Conversions } from './Conversions';
 
 export class Blending {
@@ -18,3 +22,4 @@ export class Blending {
     return Conversions.rgbToHex(blendFn(b.r, l.r), blendFn(b.g, l.g), blendFn(b.b, l.b));
   }
 }
+
