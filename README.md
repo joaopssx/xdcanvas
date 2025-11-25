@@ -1,4 +1,4 @@
-# 🎨 XDCanvas v1.0.0
+# 🎨 XDCanvas
 
 > **The ultimate canvas library for Discord bots.**  
 > *Fast, Modular, and Easy to use.*
