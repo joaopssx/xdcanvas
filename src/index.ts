@@ -34,3 +34,5 @@ export * from './utils/ColorUtils';
 export { QRCodeGenerator as QRCode } from './utils/QRCode';
 export * from './utils/SafeZone';
 export * from './utils/ImageUtils';
+export * from './utils/MathUtils';
+export * from './utils/TextUtils';

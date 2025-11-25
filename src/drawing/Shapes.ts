@@ -105,6 +105,24 @@ export class ShapeEngine {
     
     ctx.fillStyle = color;
     ctx.fill();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  public static drawCircle(
+    ctx: SKRSContext2D,
+    x: number,
+    y: number,
+    radius: number,
+    color: string | CanvasGradient,
+    shadow?: ShadowOptions
+  ): void {
+    ctx.save();
+    if (shadow) this.setShadow(ctx, shadow);
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
     ctx.restore();
   }
   

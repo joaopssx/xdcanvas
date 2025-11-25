@@ -118,4 +118,26 @@ export class ImageProcessor {
     ctx.stroke();
     ctx.restore();
   }
+  public static grayscale(ctx: SKRSContext2D, x: number, y: number, w: number, h: number): void {
+    const imageData = ctx.getImageData(x, y, w, h);
+    const data = imageData.data;
+    for (let i = 0; i < data.length; i += 4) {
+      const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+      data[i] = avg;
+      data[i + 1] = avg;
+      data[i + 2] = avg;
+    }
+    ctx.putImageData(imageData, x, y);
+  }
+
+  public static invert(ctx: SKRSContext2D, x: number, y: number, w: number, h: number): void {
+    const imageData = ctx.getImageData(x, y, w, h);
+    const data = imageData.data;
+    for (let i = 0; i < data.length; i += 4) {
+      data[i] = 255 - data[i];
+      data[i + 1] = 255 - data[i + 1];
+      data[i + 2] = 255 - data[i + 2];
+    }
+    ctx.putImageData(imageData, x, y);
+  }
 }

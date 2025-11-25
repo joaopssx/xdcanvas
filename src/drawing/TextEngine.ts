@@ -16,6 +16,14 @@ export interface TextOptions {
   autoAdjust?: boolean;
   lineHeight?: number;
   emoji?: boolean; // Enable emoji parsing
+  stroke?: boolean;
+  strokeColor?: string;
+  strokeWidth?: number;
+  shadow?: boolean;
+  shadowColor?: string;
+  shadowBlur?: number;
+  shadowOffsetX?: number;
+  shadowOffsetY?: number;
 }
 
 export class TextEngine {
@@ -36,12 +44,34 @@ export class TextEngine {
       wrap = false,
       autoAdjust = false,
       lineHeight = 1.2,
-      emoji = true
+      emoji = true,
+      stroke = false,
+      strokeColor = '#000000',
+      strokeWidth = 1,
+      shadow = false,
+      shadowColor = '#000000',
+      shadowBlur = 0,
+      shadowOffsetX = 0,
+      shadowOffsetY = 0
     } = options;
 
     ctx.fillStyle = color;
     ctx.textAlign = align;
     ctx.textBaseline = baseline;
+    
+    if (shadow) {
+        ctx.shadowColor = shadowColor;
+        ctx.shadowBlur = shadowBlur;
+        ctx.shadowOffsetX = shadowOffsetX;
+        ctx.shadowOffsetY = shadowOffsetY;
+    } else {
+        ctx.shadowColor = 'transparent';
+    }
+
+    if (stroke) {
+      ctx.strokeStyle = strokeColor;
+      ctx.lineWidth = strokeWidth;
+    }
 
     let currentSize = size;
     ctx.font = `${currentSize}px ${font}`;
@@ -61,8 +91,9 @@ export class TextEngine {
     const finalText = emoji ? text : text; // Placeholder for parsing
 
     if (wrap && maxWidth) {
-      this.drawWrappedText(ctx, finalText, x, y, maxWidth, currentSize * lineHeight);
+      this.drawWrappedText(ctx, finalText, x, y, maxWidth, currentSize * lineHeight, stroke);
     } else {
+      if (stroke) ctx.strokeText(finalText, x, y);
       ctx.fillText(finalText, x, y);
     }
   }
@@ -73,7 +104,8 @@ export class TextEngine {
     x: number,
     y: number,
     maxWidth: number,
-    lineHeight: number
+    lineHeight: number,
+    stroke: boolean = false
   ): void {
     const words = text.split(' ');
     let line = '';
@@ -85,6 +117,7 @@ export class TextEngine {
       const testWidth = metrics.width;
 
       if (testWidth > maxWidth && n > 0) {
+        if (stroke) ctx.strokeText(line, x, y + dy);
         ctx.fillText(line, x, y + dy);
         line = words[n] + ' ';
         dy += lineHeight;
@@ -92,6 +125,7 @@ export class TextEngine {
         line = testLine;
       }
     }
+    if (stroke) ctx.strokeText(line, x, y + dy);
     ctx.fillText(line, x, y + dy);
   }
 }
