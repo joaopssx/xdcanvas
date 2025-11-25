@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.0] - 2025-11-25
+### 🚀 Release
+- **Stable Release**: Consolidated updates for Advanced Color Engine and Text Engine.
+- **Documentation**: Fully updated guides and examples.
+
 ## [1.2.1] - 2025-11-25
 ### 🐛 Fixes
 - **Documentation**: Updated README, GUIDE, and CHANGELOG to reflect v1.2.0 changes.

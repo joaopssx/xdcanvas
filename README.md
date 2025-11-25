@@ -4,7 +4,7 @@
 > *Fast, Modular, and Easy to use.*
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.2.1-green.svg)
+![Version](https://img.shields.io/badge/version-1.3.0-green.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue)
 
 **XDCanvas** is a powerful graphics library designed specifically for **Discord.js** bots. It simplifies the creation of welcome cards, profile cards, rank cards, and custom images with a fluent, chainable API.
