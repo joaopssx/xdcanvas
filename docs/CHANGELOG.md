@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.6.0] - 2025-11-29
+## [1.4.2] - 2025-11-29
 ### ✨ New Features
 - **Rich Text Engine**:
   - `drawGradientText`, `drawImageText`, `drawNeonText`, `drawGlitchText`, `drawOutlinedText`.
@@ -10,7 +10,7 @@
 - **Image Composition**:
   - `grid` (Auto Layout), `reflection` (Mirror Effect).
 
-## [1.5.0] - 2025-11-29
+## [1.4.1] - 2025-11-29
 ### ✨ New Features
 - **Advanced Text Utilities**:
   - **Case**: `capitalize`, `titleCase`, `toCamel`, `toPascal`, `toSnake`, `toKebab`.
