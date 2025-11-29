@@ -2,7 +2,7 @@
   "owner": "joaopssx",
   "project": "xdcanvas",
   "github": "https://github.com/joaopssx/xdcanvas",
-  "version": "1.0.0",
+  "version": "1.6.0",
   "defaults": {
     "font": "Arial",
     "color": "#ffffff"

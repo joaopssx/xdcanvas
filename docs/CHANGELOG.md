@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.6.0] - 2025-11-29
+### ✨ New Features
+- **Rich Text Engine**:
+  - `drawGradientText`, `drawImageText`, `drawNeonText`, `drawGlitchText`, `drawOutlinedText`.
+- **Formatters**:
+  - **Time**: `duration`, `relative`, `discordTimestamp`.
+  - **Data**: `bytes`, `list`, `compactNumber`.
+- **Image Composition**:
+  - `grid` (Auto Layout), `reflection` (Mirror Effect).
+
+## [1.5.0] - 2025-11-29
+### ✨ New Features
+- **Advanced Text Utilities**:
+  - **Case**: `capitalize`, `titleCase`, `toCamel`, `toPascal`, `toSnake`, `toKebab`.
+  - **Sanitize**: `removeAccents`, `safeFilename`, `stripEmojis`, `collapseSpaces`, `removeSpecial`, `keepAscii`.
+  - **Generate**: `randomId`, `padLeft`, `padRight`.
+  - **Analyze**: `wordCount`, `isEmoji`, `extractNumbers`, `extractHashtags`, `extractMentions`.
+  - **Manipulate**: `slugify`, `limitWords`, `reverse`, `abbreviate`.
+
+## [1.4.0] - 2025-11-29
+### ✨ New Features
+- **Image & Canvas Utilities**:
+  - **Text**: `autoFit`, `wrapText` (advanced).
+  - **Filters**: `grayscale`, `sepia`, `duotone`, `tint`, `hueRotate`, `invert`, `brightness`, `contrast`, `sharpness`, `blur`, `pixelate`, `noise`, `vignette`, `motionBlur`.
+  - **Patterns**: `drawGrid`, `drawStripes`, `drawPolkaDots`, `repeatImage`.
+  - **Effects**: `dropShadow`, `innerShadow`, `coloredShadow`, `glow`, `circularMask`, `roundedMask`, `radialMask`, `featherEdges`.
+  - **Layout**: `autoResize`, `autoCenter`, `autoScale`, `rotateCenter`, `crop`, `smartCrop`, `drawBorder`.
+
 ## [1.3.0] - 2025-11-25
 ### ✨ New Features
 - **Advanced Math Engine**:

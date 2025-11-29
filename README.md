@@ -33,6 +33,24 @@
 - **Geometry**: Distance, Angle, Hypotenuse, PolarToCartesian, Collision Check.
 - **Statistics**: Moving Average, Linear Regression.
 
+### 🖼️ Image & Canvas Utilities (v1.4.0)
+- **Text Enhancements**: Auto Fit, Advanced Wrap.
+- **Filters**: Grayscale, Sepia, Duotone, Tint, Hue Rotate, Blur, Pixelate, Noise.
+- **Patterns**: Grid, Stripes, Polka Dots, Repeated Image.
+- **Effects**: Drop Shadow, Inner Shadow, Glow, Neon, Masks (Circular, Radial).
+- **Layout**: Auto Resize, Auto Center, Smart Crop, Borders.
+
+### 🔤 Advanced Text Utilities (v1.5.0)
+- **Case**: Capitalize, Title Case, Camel/Pascal/Snake/Kebab.
+- **Sanitize**: Remove Accents, Safe Filename, Strip Emojis.
+- **Analyze**: Word Count, Extract Numbers/Tags, Is Emoji.
+- **Manipulate**: Slugify, Limit Words, Reverse, Abbreviate.
+
+### 🎨 Rich Text & Formatting (v1.6.0)
+- **Canvas Effects**: Gradient, Neon, Glitch, Outlined Text.
+- **Formatters**: Duration, Relative Time, Bytes, Compact Numbers.
+- **Composition**: Grid Layouts, Mirror Reflections.
+
 ### 🤖 Discord Integration
 - **DiscordHelper**: Fetch User Avatars, Banners, and Guild Icons directly from Discord CDN.
 - **Rate Limit Handling**: Built-in backoff and retry logic for 429 errors.

@@ -3,4 +3,4 @@
  * https://github.com/joaopssx/xdcanvas
  **************************************/
 
-export * from './text';
+export * from './PatternGenerator';

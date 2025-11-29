@@ -98,6 +98,42 @@ export class TextEngine {
     }
   }
 
+  /**
+   * Automatically fits text within a bounding box by adjusting font size.
+   * Uses binary search for performance.
+   */
+  public static autoFit(
+    ctx: SKRSContext2D,
+    text: string,
+    maxWidth: number,
+    maxHeight: number,
+    options: TextOptions = {}
+  ): void {
+    let { size = 100, font = 'Arial', minSize = 10 } = options as any;
+    
+    let min = minSize;
+    let max = size;
+    let bestSize = minSize;
+
+    while (min <= max) {
+      const mid = Math.floor((min + max) / 2);
+      ctx.font = `${mid}px ${font}`;
+      const metrics = ctx.measureText(text);
+      
+      // Check width and height (approximate height with size)
+      if (metrics.width <= maxWidth && mid <= maxHeight) {
+        bestSize = mid;
+        min = mid + 1;
+      } else {
+        max = mid - 1;
+      }
+    }
+    
+    // Apply best size
+    ctx.font = `${bestSize}px ${font}`;
+    options.size = bestSize;
+  }
+
   private static drawWrappedText(
     ctx: SKRSContext2D,
     text: string,
@@ -110,6 +146,7 @@ export class TextEngine {
     const words = text.split(' ');
     let line = '';
     let dy = 0;
+    const align = ctx.textAlign;
 
     for (let n = 0; n < words.length; n++) {
       const testLine = line + words[n] + ' ';
@@ -117,8 +154,14 @@ export class TextEngine {
       const testWidth = metrics.width;
 
       if (testWidth > maxWidth && n > 0) {
-        if (stroke) ctx.strokeText(line, x, y + dy);
-        ctx.fillText(line, x, y + dy);
+        // Draw current line
+        let drawX = x;
+        if (align === 'center') drawX = x; // Center is handled by textAlign usually, but if manual x is needed:
+        // Actually ctx.textAlign handles the alignment relative to x.
+        
+        if (stroke) ctx.strokeText(line, drawX, y + dy);
+        ctx.fillText(line, drawX, y + dy);
+        
         line = words[n] + ' ';
         dy += lineHeight;
       } else {
@@ -129,3 +172,4 @@ export class TextEngine {
     ctx.fillText(line, x, y + dy);
   }
 }
+

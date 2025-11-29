@@ -40,3 +40,4 @@ Thumbs.db
 # Test artifacts
 test/
 *.png
+*.tsbuildinfo

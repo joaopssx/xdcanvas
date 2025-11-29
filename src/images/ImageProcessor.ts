@@ -118,26 +118,35 @@ export class ImageProcessor {
     ctx.stroke();
     ctx.restore();
   }
+  // --- New v1.4.0 Integrations ---
+
   public static grayscale(ctx: SKRSContext2D, x: number, y: number, w: number, h: number): void {
-    const imageData = ctx.getImageData(x, y, w, h);
-    const data = imageData.data;
-    for (let i = 0; i < data.length; i += 4) {
-      const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-      data[i] = avg;
-      data[i + 1] = avg;
-      data[i + 2] = avg;
-    }
-    ctx.putImageData(imageData, x, y);
+    // Delegate to ColorFilters
+    const { ColorFilters } = require('../utils/filters/ColorFilters');
+    ColorFilters.grayscale(ctx, x, y, w, h);
   }
 
   public static invert(ctx: SKRSContext2D, x: number, y: number, w: number, h: number): void {
-    const imageData = ctx.getImageData(x, y, w, h);
-    const data = imageData.data;
-    for (let i = 0; i < data.length; i += 4) {
-      data[i] = 255 - data[i];
-      data[i + 1] = 255 - data[i + 1];
-      data[i + 2] = 255 - data[i + 2];
-    }
-    ctx.putImageData(imageData, x, y);
+    const { ColorFilters } = require('../utils/filters/ColorFilters');
+    ColorFilters.invert(ctx, x, y, w, h);
+  }
+
+  public static sepia(ctx: SKRSContext2D, x: number, y: number, w: number, h: number): void {
+    const { ColorFilters } = require('../utils/filters/ColorFilters');
+    ColorFilters.sepia(ctx, x, y, w, h);
+  }
+
+  public static pixelate(ctx: SKRSContext2D, x: number, y: number, w: number, h: number, size: number): void {
+    const { EffectFilters } = require('../utils/filters/EffectFilters');
+    EffectFilters.pixelate(ctx, x, y, w, h, size);
+  }
+
+  public static blur(ctx: SKRSContext2D, x: number, y: number, w: number, h: number, radius: number): void {
+    // Canvas doesn't have native blur for regions easily without filter property which applies to drawing
+    // We can use the filter property if supported by @napi-rs/canvas (it is in recent versions)
+    ctx.filter = `blur(${radius}px)`;
+    ctx.drawImage(ctx.canvas, x, y, w, h, x, y, w, h);
+    ctx.filter = 'none';
   }
 }
+

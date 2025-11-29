@@ -35,4 +35,14 @@ export { QRCodeGenerator as QRCode } from './utils/QRCode';
 export * from './utils/SafeZone';
 export * from './utils/ImageUtils';
 export * from './utils/MathUtils';
-export * from './utils/TextUtils';
+export * as TextUtils from './utils/TextUtils';
+
+// v1.4.0 Modules
+export * as Filters from './utils/filters';
+export * as Patterns from './utils/patterns';
+export * as Effects from './utils/effects';
+export * as Layout from './utils/layout';
+// v1.6.0 Modules
+export * from './drawing/RichText';
+export * as Formatters from './utils/format';
+export * from './images/Compositor';

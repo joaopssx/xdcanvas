@@ -448,5 +448,133 @@ MathUtils.linearRegression([{x:1, y:2}, {x:2, y:4}]); // { slope: 2, intercept: 
 
 ---
 
+## 13. Image & Canvas Utilities (v1.4.0)
+
+XDCanvas v1.4.0 introduces a massive suite of image manipulation tools.
+
+### 1. Filters & Effects
+```typescript
+// Coming soon in v1.4.0
+// ImageUtils.grayscale(ctx, ...);
+// ImageUtils.blur(ctx, ...);
+// ImageUtils.pixelate(ctx, ...);
+```
+
+### 2. Patterns
+```typescript
+// Coming soon in v1.4.0
+// PatternGenerator.drawGrid(ctx, ...);
+// PatternGenerator.drawStripes(ctx, ...);
+```
+
+### 3. Layout & Transform
+```typescript
+// Coming soon in v1.4.0
+// Transform.autoCenter(ctx, ...);
+// Transform.smartCrop(ctx, ...);
+```
+
+---
+
+## 14. Advanced Text Utilities (v1.5.0)
+
+XDCanvas v1.5.0 adds a powerful suite of text manipulation tools.
+
+### 1. Case Conversion
+```typescript
+import { TextUtils } from 'xdcanvas';
+
+// Capitalize
+TextUtils.Case.capitalize('hello world'); // "Hello world"
+TextUtils.Case.titleCase('the lord of the rings'); // "The Lord of the Rings"
+
+// Converters
+TextUtils.Case.toCamel('hello_world'); // "helloWorld"
+TextUtils.Case.toKebab('Hello World'); // "hello-world"
+```
+
+### 2. Sanitization
+```typescript
+// Remove Accents
+TextUtils.Sanitize.removeAccents('Olá Mundo!'); // "Ola Mundo!"
+
+// Safe Filename
+TextUtils.Sanitize.safeFilename('My File Name.png'); // "my_file_name.png"
+
+// Strip Emojis
+TextUtils.Sanitize.stripEmojis('Hello 🌍!'); // "Hello !"
+```
+
+### 3. Analysis & Generation
+```typescript
+// Random ID
+TextUtils.Generate.randomId(10); // "aB3dE9..."
+
+// Analyze
+TextUtils.Analyze.wordCount('Hello world'); // 2
+TextUtils.Analyze.extractHashtags('Loving #coding and #coffee'); // ["#coding", "#coffee"]
+TextUtils.Analyze.readingTime('Long text...', 200); // 1 (minute)
+```
+
+### 4. Advanced Utilities
+```typescript
+// Regex Patterns
+if (TextUtils.Regex.isEmail('test@example.com')) { ... }
+
+// Typography
+TextUtils.Typography.smartQuotes('"Hello"'); // “Hello”
+
+// Inflect
+TextUtils.Inflect.pluralize('box', 2); // "boxes"
+
+// Manipulate
+TextUtils.Manipulate.mask('user@email.com'); // "us***@email.com"
+TextUtils.Manipulate.shuffle('abc'); // "cba"
+```
+
+---
+
+## 15. Rich Text & Formatting (v1.6.0)
+
+### 1. Canvas Text Effects
+```typescript
+import { RichText } from 'xdcanvas';
+
+// Gradient Text
+RichText.drawGradientText(ctx, 'Cool Gradient', 50, 50, ['red', 'blue']);
+
+// Neon Glow
+RichText.drawNeonText(ctx, 'Neon Lights', 50, 100, '#00ff00', 30);
+
+// Glitch Effect
+RichText.drawGlitchText(ctx, 'System Failure', 50, 150);
+```
+
+### 2. Formatters
+```typescript
+import { Formatters } from 'xdcanvas';
+
+// Time
+Formatters.TimeFormatter.duration(3661000); // "1h 1m 1s"
+Formatters.TimeFormatter.relative(Date.now() - 60000); // "1 minutes ago"
+
+// Data
+Formatters.DataFormatter.bytes(1048576); // "1 MB"
+Formatters.DataFormatter.compactNumber(1500); // "1.5K"
+```
+
+### 3. Image Composition
+```typescript
+import { Compositor } from 'xdcanvas';
+
+// Grid Layout
+const gridCanvas = Compositor.grid([img1, img2, img3, img4], 2);
+
+// Mirror Reflection
+Compositor.reflection(ctx, 0, 0, 200, 200);
+```
+
+---
+
 **End of Guide**
 *Happy Coding with XDCanvas!*

@@ -3,4 +3,6 @@
  * https://github.com/joaopssx/xdcanvas
  **************************************/
 
-export * from './text';
+export * from './Transform';
+export * from './Crop';
+export * from './Borders';
